@@ -5,6 +5,19 @@ $primary-color: #32353a;
 $secondary-color: #fff;
 $backup-color: #1781a1;
 
+@mixin jump-link {
+  display: block; 
+  content: ''; 
+  margin-top: -2rem; 
+  height: 2rem; 
+  visibility: hidden; 
+  pointer-events: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .page {
   margin: 0;
   padding: 0;
@@ -172,9 +185,14 @@ $backup-color: #1781a1;
   margin-bottom: 3rem;
   background-color: $secondary-color;
   min-height: 100vh;
+
+  &::before { 
+    @include jump-link();
+  }
 }
 
 .about {
+
   &__title {
     position: relative;
     margin: 1rem 1rem 2rem 1rem;
@@ -244,6 +262,10 @@ $backup-color: #1781a1;
 .projects {
   min-height: 100vh;
   margin-bottom: 3rem;
+
+  &::before { 
+    @include jump-link();
+  }
 
   &__title {
     position: relative;
@@ -328,6 +350,10 @@ $backup-color: #1781a1;
 
 .contact {
   margin-bottom: 3rem;
+
+  &::before { 
+    @include jump-link();
+  }
 
   &__title {
     position: relative;

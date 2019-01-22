@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .page {
   margin: 0;
   padding: 0;
@@ -211,6 +215,15 @@
   min-height: 100vh;
 }
 
+.about-skills::before {
+  display: block;
+  content: '';
+  margin-top: -2rem;
+  height: 2rem;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .about__title {
   position: relative;
   margin: 1rem 1rem 2rem 1rem;
@@ -279,6 +292,15 @@
 .projects {
   min-height: 100vh;
   margin-bottom: 3rem;
+}
+
+.projects::before {
+  display: block;
+  content: '';
+  margin-top: -2rem;
+  height: 2rem;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .projects__title {
@@ -374,6 +396,15 @@
 
 .contact {
   margin-bottom: 3rem;
+}
+
+.contact::before {
+  display: block;
+  content: '';
+  margin-top: -2rem;
+  height: 2rem;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .contact__title {
