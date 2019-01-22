@@ -1,0 +1,458 @@
+$font-serif: 'Merriweather', serif;
+$font-sans: 'Roboto', sans-serif;
+
+$primary-color: #32353a;
+$secondary-color: #fff;
+$backup-color: #1781a1;
+
+.page {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: $secondary-color;
+  color: $primary-color;
+  font-family: $font-serif;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $secondary-color;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    padding: .5rem;
+  }
+
+  &__logo--link {
+    text-decoration: none;
+    color: $primary-color;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  &__item {
+    margin: .5rem;
+
+    &:hover {
+      border-bottom: 2px solid $primary-color;
+    }
+  }
+}
+
+.nav--visibility {
+  display: none;
+}
+
+.welcome {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome--background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1)), url(../img/background.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.header {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    font-size: 3rem;
+    font-family: $font-sans;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+.square {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-50%,-50%) rotate(45deg);
+  height: 3rem;
+  width: 3rem;
+  background-color: $secondary-color;
+}
+
+.helper {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__image-container {
+    margin-right: 1rem;
+  }
+
+  &__image {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &__chat-window {
+    height: 50vh;
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $secondary-color;
+    overflow: hidden;
+  }
+
+  &__container {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+  &__dialogue {
+    padding: 0;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__chat-options {
+    padding: 0;
+    margin-left: 1rem;
+    transform: rotate(-1.5deg);
+  }
+
+  &__link {
+    display: block;
+    margin: 0 -2rem .5rem 1rem;
+    padding: .5rem 0 .5rem .5rem;
+    text-decoration: none;
+    font-size: .9rem;
+    font-family: $font-sans;
+    color: $secondary-color;
+    padding: .5rem 0 .5rem .5rem;
+    background-color: $primary-color;
+    border-radius: 2px;
+    transition: all .4s;
+    overflow: hidden;
+
+    &:hover {
+      margin-left: 0;
+      background-color: $backup-color;
+      background-image: linear-gradient(to right, #1781a1, #3990ad, #51a0ba, #67b0c6, #7dc0d3);
+    }
+  }
+}
+
+.about-skills {
+  margin-bottom: 3rem;
+  background-color: $secondary-color;
+  min-height: 100vh;
+}
+
+.about {
+  &__title {
+    position: relative;
+    margin: 1rem 1rem 2rem 1rem;
+    padding: 0 0 .5rem 0;
+    font-size: 1.5rem;
+    font-family: $font-sans;
+    background-color: $secondary-color;
+
+    &--underline {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1rem;
+        width: 100%;
+        height: 6px;
+        background-color: $backup-color;
+        background-image: linear-gradient(to right, #1781a1, #3990ad, #51a0ba, #67b0c6, #7dc0d3);
+      }
+    }
+  }
+
+  &__text {
+    margin: 1rem;
+    line-height: 1.5rem;
+  }
+
+}
+
+.skills {
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+
+  &__item {
+    margin: 1rem 0;
+
+    &--last {
+      grid-column: 2 / 2;
+    }
+  }
+
+  &__img-container {
+    width: 5rem;
+    height: auto;
+    font-size: 4rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: 4rem;
+  }
+
+  &__text {
+    margin: 0;
+    text-align: center;
+    font-family: $font-sans;
+    font-weight: 700;
+  }
+}
+
+.projects {
+  min-height: 100vh;
+  margin-bottom: 3rem;
+
+  &__title {
+    position: relative;
+    margin: 1rem 1rem 2rem 1rem;
+    padding: 0 0 .5rem 0;
+    font-size: 1.5rem;
+    font-family: $font-sans;
+    background-color: $secondary-color;
+
+    &--underline {
+      position: relative;
+
+      &::after {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        bottom: -1rem;
+        width: 100%;
+        height: 6px;
+        background-color: $backup-color;
+        background-image: linear-gradient(to right, #1781a1, #3990ad, #51a0ba, #67b0c6, #7dc0d3);
+      }
+    }
+  }
+}
+
+.project {
+  width: 100%;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+
+  &__container {
+    margin: 1rem;
+  }
+
+  &__title {
+    position: relative;
+    top: 3rem;
+    left: 1rem;
+    font-size: 3rem;
+    font-family: $font-sans;
+    transform: skew(-2deg) rotate(-2deg);
+    display: table-cell;
+    background-image: linear-gradient(to right, rgba(23, 129, 161, 0.6), rgba(72, 152, 179, 0.6), rgba(107, 175, 198, 0.6), rgba(140, 200, 218, 0.6), rgba(173, 224, 238, 0.6));  
+  }
+
+  &__img {
+    height: auto;
+    width: 100%;
+    //box-shadow: 5px 5px #7dc0d3;
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -.5rem;
+  }
+
+  &__btn {
+    flex: 1;
+    padding: 0.5rem;
+    margin: .5rem;
+    font-family: $font-sans;
+    font-size: 0.9rem;
+    color: $secondary-color;
+    background-color: $primary-color;
+    border-radius: 2px;
+    border: none;
+    transition: all .4s;
+
+    &:hover {
+      background-color: $backup-color;
+      background-image: linear-gradient(to right, #1781a1, #3990ad, #51a0ba, #67b0c6, #7dc0d3);
+      transition: all .4s;
+    }
+  }
+
+  &__description {
+    line-height: 1.5rem;
+  }
+}
+
+.contact {
+  margin-bottom: 3rem;
+
+  &__title {
+    position: relative;
+    margin: 1rem 1rem 2rem 1rem;
+    padding: 0 0 .5rem 0;
+    font-size: 1.5rem;
+    font-family: $font-sans;
+    background-color: $secondary-color;
+
+    &--underline {
+      position: relative;
+
+      &::after {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        bottom: -1rem;
+        width: 100%;
+        height: 6px;
+        background-color: $backup-color;
+        background-image: linear-gradient(to right, #1781a1, #3990ad, #51a0ba, #67b0c6, #7dc0d3);
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text {
+    margin: 1rem;
+    font-family: $font-sans;
+    align-self: center;
+  }
+}
+
+.footer {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, .5)), url(../img/background.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.social-media {
+  width: 100%;
+
+  &__accordion {
+    padding: 0;
+    padding-top: 1rem;
+    display: flex;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 3rem;
+    font-size: 0;
+    justify-content: center;
+  }
+
+  &__tab {
+    width: 3rem;
+    min-width: 3rem;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    transition: all .4s ease-in-out .1s;
+
+    &:hover {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    background: rgba(255, 255, 255, 0.5);
+    height: 3rem;
+    margin-left: 3rem;
+    position: relative;
+    padding: .3rem 0;
+  }
+
+  &__text {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: $font-sans;
+    margin: 0;
+  }
+
+  &__link {
+    font-size: .75rem;
+    margin: 0;
+  }
+
+  &__icon-link:before {
+    transition: all .4s ease-in-out .1s;
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    padding: .5rem;
+  }
+
+  &__icon--facebook:before {
+    content: url(/img/facebook.svg);
+  }
+
+  &__icon--instagram:before {
+    content: url(/img/instagram.svg);
+  }
+
+  &__icon--github:before {
+    content: url(/img/github.svg);
+  }
+}
+
+.copyright {
+  &__text {
+    margin: 0;
+    padding: 1rem;
+    font-family: $font-sans;
+    font-size: 0.75rem;
+    color: $primary-color;
+  }
+
+  &__link {
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
