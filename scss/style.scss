@@ -392,10 +392,22 @@ html {
 }
 
 .footer {
+  position: relative;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, .5)), url(../img/background.jpg);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
+
+  &__top-link {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    text-decoration: none;
+    color: $primary-color;
+    font-family: $font-sans;
+    font-size: .75rem;
+    font-weight: 700;
+  }
 }
 
 .social-media {
@@ -444,6 +456,8 @@ html {
   &__link {
     font-size: .75rem;
     margin: 0;
+    text-decoration: none;
+    color: $primary-color;
   }
 
   &__icon-link:before {

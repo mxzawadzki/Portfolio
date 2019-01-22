@@ -450,11 +450,23 @@ html {
 }
 
 .footer {
+  position: relative;
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0.5))), url(../img/background.jpg);
   background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5)), url(../img/background.jpg);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
+}
+
+.footer__top-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  text-decoration: none;
+  color: #32353a;
+  font-family: "Roboto", sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
 }
 
 .social-media {
@@ -509,6 +521,8 @@ html {
 .social-media__link {
   font-size: .75rem;
   margin: 0;
+  text-decoration: none;
+  color: #32353a;
 }
 
 .social-media__icon-link:before {
