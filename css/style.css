@@ -389,6 +389,8 @@ html {
           flex: 1;
   padding: 0.5rem;
   margin: .5rem;
+  text-align: center;
+  text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-size: 0.9rem;
   color: #fff;
