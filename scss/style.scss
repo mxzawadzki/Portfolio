@@ -143,7 +143,7 @@ html {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-}
+  }
 
   &__dialogue {
     padding: 0;
@@ -151,6 +151,12 @@ html {
 
   &__text {
     margin: 0;
+  }
+
+  &__subtext {
+    opacity: 0;
+    animation: fade-in ease 0.4s forwards;
+    animation-delay: 1s;
   }
 
   &__chat-options {
@@ -494,5 +500,23 @@ html {
     color: $primary-color;
     text-decoration: none;
     font-weight: 700;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes grow-left {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }

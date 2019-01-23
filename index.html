@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="star.png">
   <link href="https://fonts.googleapis.com/css?family=Merriweather|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/app.js" defer></script>
+  <script src="js/main.js" defer></script>
   <title>Marcin Zawadzki | Portfolio</title>
 </head>
 
@@ -38,17 +38,17 @@
       <div class="helper__chat-window">
         <div class="helper__container">
           <div class="helper__image-container">
-            <img src="img/Fingor-Smile-Open.png" alt="" class="helper__image">
+            <img src="img/Fingor-Smile-Open.png" alt="" class="helper__image" id="doggo-smile">
           </div>
           <div class="helper__dialogue">
-            <p class="helper__text">Hello, I'm Fingor the Web Assistant! <span id="helper__subtext">How can I help you?</span></p>
+            <p class="helper__text" id="doggo-chat">Hello, I'm Fingor the Web Assistant! <span class="helper__subtext">How can I help you?</span></p>
           </div>
         </div>
         <div class="helper__chat-options">
-          <a href="#about" class="helper__link">Check out the about section</a>
-          <a href="#projects" class="helper__link">Show me projects</a>
-          <a href="#contact" class="helper__link">Let's get in contact</a>
-          <a class="helper__link">Give Fingor a treat</a>
+          <a href="#about" class="helper__link helper__link--nav">Check out the about section</a>
+          <a href="#projects" class="helper__link helper__link--nav">Show me projects</a>
+          <a href="#contact" class="helper__link helper__link--nav">Let's get in contact</a>
+          <a class="helper__link" id="treat">Give Fingor a treat</a>
         </div>
       </div>
     </div>

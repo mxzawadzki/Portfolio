@@ -179,6 +179,14 @@ html {
   margin: 0;
 }
 
+.helper__subtext {
+  opacity: 0;
+  -webkit-animation: fade-in ease 0.4s forwards;
+          animation: fade-in ease 0.4s forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
 .helper__chat-options {
   padding: 0;
   margin-left: 1rem;
@@ -558,5 +566,45 @@ html {
   color: #32353a;
   text-decoration: none;
   font-weight: 700;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes grow-left {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes grow-left {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
 }
 /*# sourceMappingURL=style.css.map */
