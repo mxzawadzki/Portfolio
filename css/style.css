@@ -135,7 +135,7 @@ html {
 }
 
 .helper__image-container {
-  margin-right: 1rem;
+  margin: .25rem 1rem 0 1rem;
 }
 
 .helper__image {
@@ -146,7 +146,6 @@ html {
 .helper__chat-window {
   height: 50vh;
   position: relative;
-  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,11 +154,9 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #fff;
-  overflow: hidden;
 }
 
 .helper__container {
-  margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,7 +173,7 @@ html {
 }
 
 .helper__text {
-  margin: 0;
+  margin: 1rem 0 0 0;
 }
 
 .helper__subtext {
@@ -185,6 +182,11 @@ html {
           animation: fade-in ease 0.4s forwards;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
+}
+
+.helper__chat-options-container {
+  padding: 1rem 0;
+  overflow: hidden;
 }
 
 .helper__chat-options {
@@ -338,8 +340,9 @@ html {
 
 .project {
   width: 100%;
-  margin-top: -2rem;
+  margin-top: 4.5rem;
   margin-bottom: 2rem;
+  position: relative;
 }
 
 .project__container {
@@ -347,14 +350,18 @@ html {
 }
 
 .project__title {
-  position: relative;
-  top: 3rem;
+  position: absolute;
+  top: -4.5rem;
   left: 1rem;
   font-size: 3rem;
   font-family: "Roboto", sans-serif;
   -webkit-transform: skew(-2deg) rotate(-2deg);
           transform: skew(-2deg) rotate(-2deg);
-  display: table-cell;
+}
+
+.project__title--link {
+  text-decoration: none;
+  color: #32353a;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(23, 129, 161, 0.6)), color-stop(rgba(72, 152, 179, 0.6)), color-stop(rgba(107, 175, 198, 0.6)), color-stop(rgba(140, 200, 218, 0.6)), to(rgba(173, 224, 238, 0.6)));
   background-image: linear-gradient(to right, rgba(23, 129, 161, 0.6), rgba(72, 152, 179, 0.6), rgba(107, 175, 198, 0.6), rgba(140, 200, 218, 0.6), rgba(173, 224, 238, 0.6));
 }
@@ -475,6 +482,7 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: .75rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .social-media {
@@ -543,15 +551,15 @@ html {
 }
 
 .social-media__icon--facebook:before {
-  content: url(/img/facebook.svg);
+  content: url(../img/facebook.svg);
 }
 
 .social-media__icon--instagram:before {
-  content: url(/img/instagram.svg);
+  content: url(../img/instagram.svg);
 }
 
 .social-media__icon--github:before {
-  content: url(/img/github.svg);
+  content: url(../img/github.svg);
 }
 
 .copyright__text {

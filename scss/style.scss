@@ -120,7 +120,7 @@ html {
   justify-content: center;
 
   &__image-container {
-    margin-right: 1rem;
+    margin: .25rem 1rem 0 1rem;
   }
 
   &__image {
@@ -131,15 +131,13 @@ html {
   &__chat-window {
     height: 50vh;
     position: relative;
-    padding: 1rem;
+    //padding: 1rem;
     display: flex;
     flex-direction: column;
     background-color: $secondary-color;
-    overflow: hidden;
   }
 
   &__container {
-  margin-bottom: 2rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -150,13 +148,18 @@ html {
   }
 
   &__text {
-    margin: 0;
+    margin: 1rem 0 0 0;
   }
 
   &__subtext {
     opacity: 0;
     animation: fade-in ease 0.4s forwards;
     animation-delay: 1s;
+  }
+
+  &__chat-options-container {
+    padding: 1rem 0;
+    overflow: hidden;
   }
 
   &__chat-options {
@@ -300,21 +303,26 @@ html {
 
 .project {
   width: 100%;
-  margin-top: -2rem;
+  margin-top: 4.5rem;
   margin-bottom: 2rem;
+  position: relative;
 
   &__container {
     margin: 1rem;
   }
 
   &__title {
-    position: relative;
-    top: 3rem;
+    position: absolute;
+    top: -4.5rem;
     left: 1rem;
     font-size: 3rem;
     font-family: $font-sans;
-    transform: skew(-2deg) rotate(-2deg);
-    display: table-cell;
+    transform: skew(-2deg) rotate(-2deg); 
+  }
+
+  &__title--link {
+    text-decoration: none;
+    color: $primary-color;
     background-image: linear-gradient(to right, rgba(23, 129, 161, 0.6), rgba(72, 152, 179, 0.6), rgba(107, 175, 198, 0.6), rgba(140, 200, 218, 0.6), rgba(173, 224, 238, 0.6));  
   }
 
@@ -413,6 +421,7 @@ html {
     font-family: $font-sans;
     font-size: .75rem;
     font-weight: 700;
+    cursor: pointer;
   }
 }
 
@@ -475,15 +484,15 @@ html {
   }
 
   &__icon--facebook:before {
-    content: url(/img/facebook.svg);
+    content: url(../img/facebook.svg);
   }
 
   &__icon--instagram:before {
-    content: url(/img/instagram.svg);
+    content: url(../img/instagram.svg);
   }
 
   &__icon--github:before {
-    content: url(/img/github.svg);
+    content: url(../img/github.svg);
   }
 }
 
