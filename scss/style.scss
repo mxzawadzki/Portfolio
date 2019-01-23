@@ -69,6 +69,7 @@ html {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  transition: all .2s;
 }
 
 .welcome--background {
@@ -114,13 +115,13 @@ html {
 }
 
 .helper {
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   &__image-container {
-    margin: .25rem 1rem 0 1rem;
+    margin: .5rem 1rem 0 1rem;
   }
 
   &__image {
@@ -129,9 +130,8 @@ html {
   }
 
   &__chat-window {
-    height: 50vh;
+    min-height: 50vh;
     position: relative;
-    //padding: 1rem;
     display: flex;
     flex-direction: column;
     background-color: $secondary-color;
@@ -158,7 +158,7 @@ html {
   }
 
   &__chat-options-container {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     overflow: hidden;
   }
 
