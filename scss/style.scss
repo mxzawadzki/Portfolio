@@ -1,5 +1,6 @@
 $font-serif: 'Merriweather', serif;
 $font-sans: 'Roboto', sans-serif;
+$font-header: 1.75rem;
 
 $primary-color: #32353a;
 $secondary-color: #fff;
@@ -33,36 +34,63 @@ html {
   left: 0;
   width: 100%;
   background-color: $secondary-color;
+  opacity: .98;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  transition: all .4s;
+  z-index: 3;
+
+  .nav__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__logo {
-    padding: .5rem;
+    padding: 1rem;
   }
 
   &__logo--link {
     text-decoration: none;
     color: $primary-color;
+    font-family: $font-sans;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    transition: all .4s;
+
+    &:hover {
+      color: #67b0c6;;
+    }
   }
 
   &__list {
     margin: 0;
-    padding: 0;
+    padding: 1rem;
     list-style: none;
     display: flex;
+    margin: 0 -.5rem;
   }
 
   &__item {
-    margin: .5rem;
+    position: relative;
+  }
+
+  .nav__link {
+    color: $primary-color;
+    text-decoration: none;
+    font-family: $font-sans;
+    margin: 0 .5rem;
+    transform: rotate(3deg);
+    transition: all .4s;
 
     &:hover {
-      border-bottom: 2px solid $primary-color;
+      color: #67b0c6;
     }
   }
 }
 
-.nav--visibility {
-  display: none;
+.nav--invisible {
+  opacity: 0;
 }
 
 .welcome {
@@ -91,7 +119,7 @@ html {
   align-items: center;
 
   &__title {
-    margin: 0;
+    margin: 0 1rem;
     text-align: center;
     font-size: 3rem;
     font-family: $font-sans;
@@ -148,7 +176,7 @@ html {
   }
 
   &__text {
-    margin: 1rem 0 0 0;
+    margin: 1rem 1rem 0 0;
   }
 
   &__subtext {
@@ -171,7 +199,6 @@ html {
   &__link {
     display: block;
     margin: 0 -2rem .5rem 1rem;
-    padding: .5rem 0 .5rem .5rem;
     text-decoration: none;
     font-size: .9rem;
     font-family: $font-sans;
@@ -192,7 +219,6 @@ html {
 
 .about-skills {
   margin-bottom: 3rem;
-  background-color: $secondary-color;
   min-height: 100vh;
 
   &::before { 
@@ -206,7 +232,7 @@ html {
     position: relative;
     margin: 1rem 1rem 2rem 1rem;
     padding: 0 0 .5rem 0;
-    font-size: 1.5rem;
+    font-size: $font-header;
     font-family: $font-sans;
     background-color: $secondary-color;
 
@@ -280,7 +306,7 @@ html {
     position: relative;
     margin: 1rem 1rem 2rem 1rem;
     padding: 0 0 .5rem 0;
-    font-size: 1.5rem;
+    font-size: $font-header;
     font-family: $font-sans;
     background-color: $secondary-color;
 
@@ -323,6 +349,7 @@ html {
   &__title--link {
     text-decoration: none;
     color: $primary-color;
+    background-color: rgba(255, 255, 255, .4);
     background-image: linear-gradient(to right, rgba(23, 129, 161, 0.6), rgba(72, 152, 179, 0.6), rgba(107, 175, 198, 0.6), rgba(140, 200, 218, 0.6), rgba(173, 224, 238, 0.6));  
   }
 
@@ -375,7 +402,7 @@ html {
     position: relative;
     margin: 1rem 1rem 2rem 1rem;
     padding: 0 0 .5rem 0;
-    font-size: 1.5rem;
+    font-size: $font-header;
     font-family: $font-sans;
     background-color: $secondary-color;
 
@@ -413,18 +440,6 @@ html {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-
-  &__top-link {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    text-decoration: none;
-    color: $primary-color;
-    font-family: $font-sans;
-    font-size: .75rem;
-    font-weight: 700;
-    cursor: pointer;
-  }
 }
 
 .social-media {
@@ -475,6 +490,10 @@ html {
     margin: 0;
     text-decoration: none;
     color: $primary-color;
+
+    &:hover {
+      color: $backup-color;
+    }
   }
 
   &__icon-link:before {
@@ -511,6 +530,10 @@ html {
     color: $primary-color;
     text-decoration: none;
     font-weight: 700;
+
+    &:hover {
+      color: $backup-color;
+    }
   }
 }
 
@@ -530,4 +553,169 @@ html {
   to {
     transform: scaleX(1);
   }
+}
+
+@media (min-width: 500px) {
+  .nav__logo--link {
+    font-size: 1.25rem;
+  }
+
+  .nav__link {
+    font-size: 1.25rem;
+  }
+
+  .header__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .helper__image {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  .helper__text {
+    font-size: 1.5rem;
+  }
+
+  .helper__chat-options {
+    padding-left: 2.5rem;
+  }
+
+  .helper__link {
+    padding: 1rem 0 1rem 1rem;
+    &:hover {
+      margin-left: -1rem;
+    }
+  }
+
+  .about-skills {
+    min-height: auto;
+  }
+
+  .skills__container {
+    margin: 0 auto;
+  }
+
+  .project__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    column-gap: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav__container {
+    max-width: 768px;
+  }
+
+  .helper__chat-window {
+    background-color: rgba(255, 255, 255, .0);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .4), rgba(255, 255, 255, 1))
+  }
+
+  .header__title {
+    margin: 0 2rem;
+  }
+
+  .about-skills {
+    margin: 0 auto 3rem auto;
+    max-width: 768px;
+  }
+
+  .about__title {
+    margin-top: 3rem;
+  }
+
+  .projects {
+    margin: 0 auto 3rem auto;
+    max-width: 768px;
+  }
+
+  .social-media__accordion {
+    margin: 0 auto;
+    max-width: 768px;
+  }
+
+  .contact {
+    margin: 0 auto 3rem auto;
+    max-width: 768px;
+  }
+
+  .welcome {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    transition: all .2s;
+  }
+
+  .header {
+    height: 100vh;
+    width: 50vw;
+
+    &__subtitle {
+      font-size: 1.5rem;
+    }
+  }
+
+.square {
+  opacity: .0;
+}
+
+.helper {
+  min-height: 100vh;
+  width: 50vw;
+
+  &__chat-window {
+    padding-top: 10rem;
+    min-height: 100vh;
+    justify-content: center;
+  }
+}
+}
+
+@media (min-width: 1025px) {
+  .nav__container {
+    max-width: 1000px;
+  }
+
+  .about-skills {
+    max-width: 1000px;
+  }
+
+  .skills__container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    max-width: auto;
+  }
+
+  .skills__item--last {
+    grid-column: auto;
+  }
+
+  .projects {
+    max-width: 1000px;
+  }
+
+  .social-media__accordion {
+    max-width: 768px;
+  }
+
+  .contact {
+    max-width: 1000px;
+  }
+
+  .contact__container {
+    margin-left: 1rem;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1280px) {
+  .welcome--background {
+    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1)), url(../img/background-b.jpg);
+  }
+
+  .footer {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, .5)), url(../img/background-b.jpg);
+}
 }

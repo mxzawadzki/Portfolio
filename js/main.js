@@ -1,7 +1,18 @@
-window.addEventListener("load", activateLinks);
+window.addEventListener('load', activateLinks);
+window.addEventListener('scroll', showNavigation);
 document.getElementById('treat').addEventListener('click', giveTreat);
 
 let timeoutID;
+
+function showNavigation() {
+  const nav = document.querySelector('.nav');
+  let currentPosition = window.scrollY;
+  if (currentPosition >= 550) {
+    nav.classList.remove('nav--invisible');
+  } else {
+    nav.classList.add('nav--invisible');
+  }
+};
 
 function fingorWelcome() {
   document.getElementById('doggo-chat').textContent = 'Hello, I\'m Fingor the Web Assistant! How can I help you?';
